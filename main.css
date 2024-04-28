@@ -1,0 +1,86 @@
+body {
+    font-family: Arial, sans-serif;
+    /* Optional: Set font family */
+}
+
+header {
+    text-align: center;
+}
+
+.section {
+    box-sizing: border-box;
+    border: 1px solid black;
+    background-color: gray;
+    padding: 5px 10px;
+    font-size: 125%;
+    position: absolute
+    top: 0;
+    right: 0;
+    margin-bottom: 20px;
+    width: 50%%;
+    float: left;
+    margin-right: 10px;
+     /* Vertical spacing between sections */
+}
+
+.section-title {
+    background-color: gray;
+    /* Unique color for section title region */
+    color: black;
+    /* Text color for better readability */
+    padding: 5px 10px;
+    font-size: 125%;
+    /* 25% larger font size */
+    border: 1px solid black;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+p {
+    padding: 20px;
+    /* Spacing between text and section edges */
+}
+
+/* Desktop View */
+@media (min-width: 992px) {
+    .section {
+        width: 33.33%;
+        /* Equal width for each section */
+        float: left;
+        margin-right: 20px;
+        /* Horizontal spacing between sections */
+    }
+}
+
+/* Tablet View */
+@media (min-width: 768px) and (max-width: 991px) {
+    .section {
+        width: 50%;
+        /* Equal width for the first two sections */
+        float: left;
+        clear: both;
+        /* Clear float to ensure proper stacking */
+        margin-right: 10px;
+        /* Horizontal spacing between sections */
+    }
+
+    .section:nth-child(3) {
+        width: 50%;
+        /* Full width for the third section */
+        float: none;
+        clear: both;
+        /* Clear float to ensure proper stacking */
+    }
+}
+
+/* Mobile View */
+@media (max-width: 767px) {
+    .section {
+        width: 100%;
+        /* Full width for each section */
+        float: none;
+        margin-right: 0;
+        /* Remove horizontal spacing */
+    }
+}
